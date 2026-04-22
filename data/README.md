@@ -4,7 +4,10 @@ This directory is intentionally empty in git.
 
 Suggested layout:
 
-- `raw/`: downloaded FDA IID, DailyMed SPL exports, and external polymer corpora
+- `fda_iid/raw/`: downloaded FDA IID files
+- `dailymed/raw/`: downloaded SPL exports or parsed label tables
+- `schema/`: candidate polymer tables and synonym mappings
+- `benchmark/`: train, validation, and test benchmark manifests
 - `interim/`: normalized tables with synonym mapping
 - `processed/`: model-ready ranking datasets
 

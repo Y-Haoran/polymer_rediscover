@@ -17,3 +17,7 @@ PRIMARY_DATASETS = (
     "FDA Inactive Ingredient Database for approved-use context",
     "DailyMed SPL for API and inactive ingredient co-occurrence",
 )
+
+FIRST_BENCHMARK = (
+    "API plus oral context to ranked polymer excipient retrieval on held-out marketed products"
+)

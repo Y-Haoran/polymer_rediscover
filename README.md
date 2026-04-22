@@ -17,6 +17,13 @@ This repository is set up so the project can grow in three directions without re
 - FDA IID and DailyMed data preparation
 - ranking and prospective validation workflows
 
+The current scaffold now includes:
+
+- `data/fda_iid/` and `data/dailymed/` placeholders for raw and normalized regulatory data
+- a normalization schema for polymer candidate and synonym tables
+- a generic ranking benchmark loader
+- a frozen-backbone evaluation entrypoint with a deterministic hash baseline and optional PolyTAO support
+
 ## Proposed data flow
 
 1. Pretrain or adapt a polymer encoder on large polymer corpora.
@@ -36,13 +43,32 @@ This repository is set up so the project can grow in three directions without re
 
 ```bash
 cd git_repos/polymer_rediscover
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
-python -m polymer_rediscover.cli
-python -m unittest discover -s tests
+python3 -m polymer_rediscover.cli
+python3 -m unittest discover -s tests
+```
+
+To try the toy ranking benchmark:
+
+```bash
+PYTHONPATH=src python3 -m polymer_rediscover.evaluate \
+  --benchmark data/benchmark/example_oral_polymer_ranking.jsonl \
+  --candidates data/schema/candidate_polymers_example.tsv \
+  --backbone hash
+```
+
+To experiment with frozen PolyTAO embeddings later:
+
+```bash
+pip install -e ".[ml]"
+PYTHONPATH=src python3 -m polymer_rediscover.evaluate \
+  --benchmark data/benchmark/example_oral_polymer_ranking.jsonl \
+  --candidates data/schema/candidate_polymers_example.tsv \
+  --backbone polytao
 ```
 
 ## Current status
 
-This is the initial scaffold. It does not yet include proprietary or downloaded FDA or DailyMed datasets.
+This scaffold does not include downloaded FDA IID or DailyMed data yet, but it now has the schema and code paths needed to normalize them into a first retrieval benchmark.

@@ -13,8 +13,15 @@ authors = [
 ]
 dependencies = []
 
+[project.optional-dependencies]
+ml = [
+  "torch>=2.2",
+  "transformers>=4.41",
+]
+
 [project.scripts]
 polymer-rediscover = "polymer_rediscover.cli:main"
+polymer-rediscover-eval = "polymer_rediscover.evaluate:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

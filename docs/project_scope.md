@@ -30,7 +30,7 @@ Minimal entities to normalize:
 
 ## Immediate next steps
 
-1. Add raw data acquisition instructions for FDA IID and DailyMed.
-2. Define the polymer candidate list and synonym normalization rules.
-3. Implement train, validation, and family-aware split logic.
-4. Add ranking baselines before model adaptation work.
+1. Download FDA IID and DailyMed exports into the repo data layout.
+2. Expand the polymer candidate list and synonym normalization rules beyond the toy examples.
+3. Implement train, validation, and family-aware split logic on normalized product tables.
+4. Benchmark frozen backbones before attempting any PolyTAO adaptation.

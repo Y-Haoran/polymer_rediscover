@@ -2,7 +2,13 @@
 
 from __future__ import annotations
 
-from .project import DEFAULT_CONTEXTS, PRIMARY_DATASETS, PROJECT_NAME, PROJECT_SUMMARY
+from .project import (
+    DEFAULT_CONTEXTS,
+    FIRST_BENCHMARK,
+    PRIMARY_DATASETS,
+    PROJECT_NAME,
+    PROJECT_SUMMARY,
+)
 
 
 def build_summary() -> str:
@@ -12,6 +18,7 @@ def build_summary() -> str:
         f"{PROJECT_NAME}\n"
         f"{PROJECT_SUMMARY}\n\n"
         f"Default contexts: {contexts}\n\n"
+        f"First benchmark: {FIRST_BENCHMARK}\n\n"
         f"Primary datasets:\n{datasets}\n"
     )
 

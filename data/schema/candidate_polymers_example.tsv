@@ -1,0 +1,5 @@
+candidate_id	canonical_name	family	unii	cas	candidate_text	metadata_json
+pvp	Povidone	polyvinylpyrrolidone			polymer excipient povidone binder oral tablet polyvinylpyrrolidone	{}
+copovidone	Copovidone	vinylpyrrolidone-vinyl acetate copolymer			polymer excipient copovidone oral solid dispersion carrier amphiphilic tablet	{}
+hpmcas	Hydroxypropyl methylcellulose acetate succinate	cellulose derivative			polymer excipient hpmcas enteric oral amorphous solid dispersion carrier capsule	{}
+peg	Polyethylene glycol	polyether			polymer excipient polyethylene glycol peg plasticizer hydrophilic oral	{}
