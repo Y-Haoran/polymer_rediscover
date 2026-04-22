@@ -9,6 +9,11 @@ This project assumes a staged build of the first benchmark rather than direct mo
 - `data/schema/`: candidate polymer and synonym tables
 - `data/benchmark/`: JSONL ranking examples
 
+The code supports both:
+
+- manual placement of raw FDA IID zip files and DailyMed XML or ZIP label files
+- scripted download from official FDA and DailyMed sources
+
 ## Stage 2 normalization targets
 
 From FDA IID, normalize at least:
@@ -49,3 +54,18 @@ Keep the first benchmark conservative:
 1. Start with frozen backbones and non-neural baselines.
 2. Confirm signal on the retrospective benchmark.
 3. Fine-tune only after the benchmark and leakage controls are stable.
+
+## Suggested command sequence
+
+```bash
+PYTHONPATH=src python3 -m polymer_rediscover.fda_iid download
+PYTHONPATH=src python3 -m polymer_rediscover.fda_iid normalize
+
+PYTHONPATH=src python3 -m polymer_rediscover.dailymed download-metadata
+# If you already have DailyMed ZIP or XML labels, put them in data/dailymed/raw/labels/
+# Otherwise fetch specific current labels by setid:
+PYTHONPATH=src python3 -m polymer_rediscover.dailymed fetch-setids --setid-file path/to/setids.txt
+PYTHONPATH=src python3 -m polymer_rediscover.dailymed parse
+
+PYTHONPATH=src python3 -m polymer_rediscover.assemble build-benchmark
+```

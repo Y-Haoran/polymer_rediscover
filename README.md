@@ -22,6 +22,7 @@ The current scaffold now includes:
 - `data/fda_iid/` and `data/dailymed/` placeholders for raw and normalized regulatory data
 - a normalization schema for polymer candidate and synonym tables
 - a generic ranking benchmark loader
+- Stage 2 and Stage 3 download and parsing CLIs for FDA IID and DailyMed
 - a frozen-backbone evaluation entrypoint with a deterministic hash baseline and optional PolyTAO support
 
 ## Proposed data flow
@@ -57,6 +58,17 @@ PYTHONPATH=src python3 -m polymer_rediscover.evaluate \
   --benchmark data/benchmark/example_oral_polymer_ranking.jsonl \
   --candidates data/schema/candidate_polymers_example.tsv \
   --backbone hash
+```
+
+To build the real Stage 2 and Stage 3 inputs:
+
+```bash
+PYTHONPATH=src python3 -m polymer_rediscover.fda_iid download
+PYTHONPATH=src python3 -m polymer_rediscover.fda_iid normalize
+PYTHONPATH=src python3 -m polymer_rediscover.dailymed download-metadata
+PYTHONPATH=src python3 -m polymer_rediscover.dailymed fetch-setids --setid-file path/to/setids.txt
+PYTHONPATH=src python3 -m polymer_rediscover.dailymed parse
+PYTHONPATH=src python3 -m polymer_rediscover.assemble build-benchmark
 ```
 
 To experiment with frozen PolyTAO embeddings later:

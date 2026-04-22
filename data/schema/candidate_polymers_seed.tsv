@@ -1,0 +1,21 @@
+candidate_id	canonical_name	family	unii	cas	candidate_text	metadata_json
+povidone	Povidone	polyvinylpyrrolidone			polymer excipient povidone polyvinylpyrrolidone oral solid binder and carrier	{}
+copovidone	Copovidone	vinylpyrrolidone-vinyl acetate copolymer			polymer excipient copovidone povidone vinyl acetate oral solid dispersion carrier	{}
+hypromellose	Hypromellose	cellulose ether			polymer excipient hypromellose hpmc hydroxypropyl methylcellulose oral tablet capsule film former	{}
+hpmcas	Hydroxypropyl methylcellulose acetate succinate	cellulose derivative			polymer excipient hpmcas hydroxypropyl methylcellulose acetate succinate enteric oral dispersion carrier	{}
+hpmcp	Hydroxypropyl methylcellulose phthalate	cellulose derivative			polymer excipient hpmcp hydroxypropyl methylcellulose phthalate enteric oral	{}
+hydroxypropyl_cellulose	Hydroxypropyl cellulose	cellulose ether			polymer excipient hydroxypropyl cellulose hpc oral tablet capsule	{}
+hydroxyethyl_cellulose	Hydroxyethyl cellulose	cellulose ether			polymer excipient hydroxyethyl cellulose oral formulation polymer	{}
+ethylcellulose	Ethylcellulose	cellulose ether			polymer excipient ethylcellulose oral controlled release matrix polymer	{}
+cellulose_acetate_phthalate	Cellulose acetate phthalate	cellulose ester			polymer excipient cellulose acetate phthalate enteric oral polymer	{}
+cellulose_acetate	Cellulose acetate	cellulose ester			polymer excipient cellulose acetate polymer oral coating material	{}
+polyethylene_glycol	Polyethylene glycol	polyether			polymer excipient polyethylene glycol peg oral hydrophilic polymer carrier	{}
+poloxamer	Poloxamer	block copolymer surfactant			polymer excipient poloxamer oral formulation amphiphilic block copolymer	{}
+polyvinyl_alcohol	Polyvinyl alcohol	vinyl polymer			polymer excipient polyvinyl alcohol oral coating polymer	{}
+carbomer	Carbomer	polyacrylic acid polymer			polymer excipient carbomer carbopol crosslinked polyacrylic acid polymer	{}
+polycarbophil	Polycarbophil	polyacrylic acid polymer			polymer excipient polycarbophil polyacrylic acid polymer	{}
+methacrylate_copolymer	Methacrylate copolymer	methacrylate polymer			polymer excipient methacrylic acid copolymer polymethacrylate enteric oral polymer	{}
+croscarmellose_sodium	Croscarmellose sodium	cellulose derivative			polymer excipient croscarmellose sodium crosslinked sodium carboxymethyl cellulose disintegrant	{}
+sodium_carboxymethylcellulose	Sodium carboxymethylcellulose	cellulose derivative			polymer excipient sodium carboxymethylcellulose sodium cmc oral polymer	{}
+shellac	Shellac	natural polymer resin			polymer excipient shellac natural polymer resin oral coating	{}
+microcrystalline_cellulose	Microcrystalline cellulose	cellulose polymer			polymer excipient microcrystalline cellulose mcc oral tablet filler polymer	{}

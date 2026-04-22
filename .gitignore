@@ -7,3 +7,9 @@ build/
 dist/
 data/raw/
 data/processed/
+data/fda_iid/raw/
+data/fda_iid/processed/
+data/dailymed/raw/
+data/dailymed/processed/
+data/benchmark/oral_polymer_ranking.jsonl
+data/benchmark/resolved_polymer_product_records.tsv

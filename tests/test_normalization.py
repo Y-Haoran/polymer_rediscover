@@ -22,6 +22,17 @@ class NormalizationTests(unittest.TestCase):
             "Hydroxypropyl methylcellulose acetate succinate",
         )
 
+    def test_synonym_index_handles_grade_suffixes(self) -> None:
+        path = (
+            Path(__file__).resolve().parents[1]
+            / "data"
+            / "schema"
+            / "polymer_synonyms_seed.tsv"
+        )
+        index = SynonymIndex.from_tsv(path)
+        self.assertEqual(index.resolve("Povidone K30"), "povidone")
+        self.assertEqual(index.resolve("Polyethylene Glycol 4000"), "polyethylene_glycol")
+
 
 if __name__ == "__main__":
     unittest.main()

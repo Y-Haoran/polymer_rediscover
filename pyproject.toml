@@ -22,6 +22,9 @@ ml = [
 [project.scripts]
 polymer-rediscover = "polymer_rediscover.cli:main"
 polymer-rediscover-eval = "polymer_rediscover.evaluate:main"
+polymer-rediscover-fda-iid = "polymer_rediscover.fda_iid:main"
+polymer-rediscover-dailymed = "polymer_rediscover.dailymed:main"
+polymer-rediscover-build-benchmark = "polymer_rediscover.assemble:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
